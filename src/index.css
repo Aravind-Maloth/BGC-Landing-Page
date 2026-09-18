@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --color-primary: #182A67;
+  --color-secondary: #102B83;
+  /* --color-accent: #3B82F6; */
+
+  --color-bg: linear-gradient(0deg, #020617, #020617),radial-gradient(90.58% 119.93% at 50% 0%, rgba(59, 130, 246, 0.18) 0%, rgba(59, 130, 246, 0) 55%);
+  --color-text: #E0AE67;
+
+  /* --color-success: #16a34a;
+  --color-error: #dc2626; */
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes navbarFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-navbarFade {
+  animation: navbarFade 0.8s ease-out forwards;
+}

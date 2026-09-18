@@ -1,0 +1,34 @@
+.direction-fill {
+  position: absolute;
+  inset: 0;
+  background: white;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+/* Direction-based entry */
+[data-dir="left"]:hover .direction-fill {
+  transform: translateX(0);
+}
+
+[data-dir="right"] .direction-fill {
+  transform: translateX(100%);
+}
+[data-dir="right"]:hover .direction-fill {
+  transform: translateX(0);
+}
+
+[data-dir="top"] .direction-fill {
+  transform: translateY(-100%);
+}
+[data-dir="top"]:hover .direction-fill {
+  transform: translateY(0);
+}
+
+[data-dir="bottom"] .direction-fill {
+  transform: translateY(100%);
+}
+[data-dir="bottom"]:hover .direction-fill {
+  transform: translateY(0);
+}

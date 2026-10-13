@@ -9,11 +9,11 @@ import { HiOutlineArrowUpRight, HiOutlinePhone } from "react-icons/hi2";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Solutions", href: "#" },
-  { name: "Industries", href: "#" },
-  { name: "Contact Us", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Solutions", href: "/solutions" },
+  { name: "Industries", href: "/industries" },
+  { name: "Contact Us", href: "/contactus" },
 ];
 
 const socialLinks = [
@@ -183,10 +183,15 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800/80 pt-8 text-center text-xs text-slate-400 sm:flex-row sm:text-left">
-            <p>
-              © {new Date().getFullYear()} TrueFace, Inc. All rights reserved.
-            </p>
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-800/80 pt-8 text-center text-xs sm:text-[13px] text-slate-400 sm:flex-row sm:text-left">
+           
+            <div>
+              <p>
+                © {new Date().getFullYear()} TrueFace, Inc. All rights reserved.
+              </p>
+              <p>Powered by CSTech</p>
+            </div>
+
             <div className="flex gap-6">
               <a href="#" className="transition-colors hover:text-slate-300">
                 Privacy Policy

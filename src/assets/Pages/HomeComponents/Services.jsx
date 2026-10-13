@@ -26,13 +26,13 @@ const services = [
       "Search national and regional databases with continuous risk monitoring enabled.",
     tags: ["Court records", "Watchlists", "Continuous alerts"],
   },
-  {
-    icon: <Pill size={18} className="text-green-400" />,
-    title: "Drug & behaviour screening",
-    desc:
-      "Lab-based or on-site drug tests with full compliance and strict chain of custody.",
-    tags: ["10-panel tests", "Chain of custody"],
-  },
+  // {
+  //   icon: <Pill size={18} className="text-green-400" />,
+  //   title: "Drug & behaviour screening",
+  //   desc:
+  //     "Lab-based or on-site drug tests with full compliance and strict chain of custody.",
+  //   tags: ["10-panel tests", "Chain of custody"],
+  // },
   {
     icon: <Briefcase size={18} className="text-yellow-400" />,
     title: "Employment & UAN history",
@@ -47,13 +47,13 @@ const services = [
       "Design custom verification workflows with our visual no-code builder.",
     tags: ["Role-based", "Country-aware", "APIs"],
   },
-  {
-    icon: <Lock size={18} className="text-cyan-400" />,
-    title: "Compliance & auditing",
-    desc:
-      "Immutable audit trails, consent capture and regulator-ready exports.",
-    tags: ["SOC2-ready", "Consent vault", "Exports"],
-  },
+  // {
+  //   icon: <Lock size={18} className="text-cyan-400" />,
+  //   title: "Compliance & auditing",
+  //   desc:
+  //     "Immutable audit trails, consent capture and regulator-ready exports.",
+  //   tags: ["SOC2-ready", "Consent vault", "Exports"],
+  // },
 ];
 
 const ServicesSection = () => {
@@ -75,13 +75,13 @@ const ServicesSection = () => {
         </p>
 
         {/* Cards */}
-        <StaggerContainer className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <TiltCard service={service} />
-            </motion.div>
-          ))}
-        </StaggerContainer>
+     <StaggerContainer className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
+  {services.slice(0, 4).map((service, index) => (
+    <motion.div key={index} variants={itemVariants}>
+      <TiltCard service={service} />
+    </motion.div>
+  ))}
+</StaggerContainer>
       </div>
     </section>
   );

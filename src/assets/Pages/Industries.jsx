@@ -57,6 +57,17 @@ const Industries = () => {
     },
   };
 
+  const scrollToIndustryDetails = () => {
+  const el = document.getElementById("industry-details-section");
+
+  if (el) {
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
+
   // Banking & Financial Services is selected by default
   const [activeIndustry, setActiveIndustry] = useState(industriesData[0]);
 
@@ -64,7 +75,7 @@ const Industries = () => {
     <div>
         <Banner/>
 
-       <section
+       <section 
       className="relative overflow-hidden bg-[#f8f8fa] py-16 lg:py-24"
       style={{
         backgroundImage: "url('/Home/homebg.png')",
@@ -74,7 +85,8 @@ const Industries = () => {
     >
       <div className="mx-4 lg:max-w-8xl max-w-8xl px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div
+        <motion.div   id="industry-details-section"
+
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -136,7 +148,7 @@ const Industries = () => {
                   {activeIndustry.description}
                 </p>
                 <div>
-                  <button className="inline-flex items-center gap-2 rounded-full bg-[#1D3D91] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#163075]">
+                  <button className="inline-flex items-center gap-2 rounded-full bg-[#1D3D91] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#163075]" >
                     Explore {activeIndustry.title}
                     <ArrowRight className="h-4 w-4" />
                   </button>
@@ -159,7 +171,7 @@ const Industries = () => {
     const isActive = item.id === activeIndustry.id;
 
     return (
-      <motion.div
+      <motion.div 
         key={item.id}
         variants={itemVariants}
         whileHover={{ y: -6, scale: 1.02 }}
@@ -213,9 +225,20 @@ const Industries = () => {
       </div>
     </section>
 
-       <section>
-            
-       </section>
+      {/* <section
+  id="industry-details-section"
+  className="scroll-mt-20 bg-white py-16 lg:py-24"
+>
+  <div className="mx-auto max-w-7xl px-6">
+    <h2 className="text-3xl font-bold text-[#1D3D91]">
+      {activeIndustry.title}
+    </h2>
+
+    <p className="mt-4 text-gray-600">
+      {activeIndustry.description}
+    </p>
+  </div>
+</section> */}
     </div>
   )
 }

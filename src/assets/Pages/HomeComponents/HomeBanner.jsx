@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SlidingButton } from '../../Components/common/SlidingButton';
+import { useNavigate } from "react-router-dom";
+
 const cardData = [
   {
     type: 'profile',
@@ -57,6 +59,8 @@ const itemVariants = {
 };
 
 const HomeBanner = () => {
+    const navigate = useNavigate();
+
   return (
     <div>
       <section

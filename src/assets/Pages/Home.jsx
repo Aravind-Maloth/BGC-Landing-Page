@@ -7,8 +7,7 @@ import Resources from './HomeComponents/Resources';
 import Cards from '../Components/common/Cards';
 import FadeIn from '../Components/common/FadeIn';
 import { motion } from "framer-motion";
-import { Navigate } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 const useCountUpOnView = (end, duration = 1200) => {
   const [value, setValue] = useState(0);
   const ref = React.useRef(null);
@@ -56,6 +55,7 @@ const Home = () => {
   const [count98, ref98] = useCountUpOnView(98);
 const [count20, ref20] = useCountUpOnView(10);
 const [count40, ref40] = useCountUpOnView(40);
+const navigate = useNavigate();
 
 
   return (
@@ -113,7 +113,7 @@ const [count40, ref40] = useCountUpOnView(40);
             </ul>
 
           <motion.button
-      onClick={()=>Navigate('solutions')}
+  onClick={() => navigate("/solutions")}
       initial="initial"
       whileHover="hover"
       whileTap={{ scale: 0.97 }}

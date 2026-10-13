@@ -150,7 +150,7 @@ const containerVariants = {
 
             {/* 2. SECONDARY BUTTON: "View Solutions" */}
             <motion.button
-          onClick={() => navigate("/contactus")}
+  onClick={scrollToSolutions}
               initial="initial"
               whileHover="hover"
               whileTap={{ scale: 0.96 }}

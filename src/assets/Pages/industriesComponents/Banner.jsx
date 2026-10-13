@@ -13,7 +13,16 @@ import { useNavigate } from "react-router-dom";
 const Banner = () => {
   const [activeSegment, setActiveSegment] = useState(null);
   const navigate = useNavigate();
+const scrollToIndustryDetails = () => {
+  const el = document.getElementById("industry-details-section");
 
+  if (el) {
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
   const segmentsData = {
     healthcare: {
       id: "healthcare",
@@ -129,43 +138,44 @@ const Banner = () => {
       className="mt-8 flex flex-wrap items-center gap-4"
     >
       {/* Primary Gold Button */}
-      <motion.button
-          onClick={() => navigate("/contactus")}
-        initial="rest"
-        whileHover="hover"
-        whileTap="tap"
-        variants={{
-          rest: { scale: 1 },
-          hover: { scale: 1.05 },
-          tap: { scale: 0.96 },
-        }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        className="relative flex items-center gap-2 overflow-hidden rounded-full bg-[#E8B35A] px-7 py-3.5 text-sm font-bold text-slate-900 shadow-lg shadow-amber-500/20 transition-colors hover:bg-[#d5a145] sm:text-base cursor-pointer"
-      >
-        {/* Subtle Shine/Glow Effect on Hover */}
-        <motion.span
-          variants={{
-            rest: { x: "-100%", opacity: 0 },
-            hover: { x: "100%", opacity: 0.6 },
-          }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent"
-        />
+    <motion.button
+  onClick={scrollToIndustryDetails}
+  initial="rest"
+  whileHover="hover"
+  whileTap="tap"
+  variants={{
+    rest: { scale: 1 },
+    hover: { scale: 1.05 },
+    tap: { scale: 0.96 },
+  }}
+  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+  className="relative flex cursor-pointer items-center gap-2 overflow-hidden rounded-full bg-[#E8B35A] px-7 py-3.5 text-sm font-bold text-slate-900 shadow-lg shadow-amber-500/20 transition-colors hover:bg-[#d5a145] sm:text-base"
+>
+  {/* Shine Effect */}
+  <motion.span
+    variants={{
+      rest: { x: "-100%", opacity: 0 },
+      hover: { x: "100%", opacity: 0.6 },
+    }}
+    transition={{ duration: 0.6, ease: "easeInOut" }}
+    className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent"
+  />
 
-        <span className="relative z-10">Explore Industries</span>
+  <span className="relative z-10">
+    Explore Industries
+  </span>
 
-        {/* Animated Arrow Icon */}
-        <motion.span
-          variants={{
-            rest: { x: 0 },
-            hover: { x: 4 },
-          }}
-          transition={{ type: "spring", stiffness: 400, damping: 20 }}
-          className="relative z-10 flex items-center justify-center"
-        >
-          <ChevronRight className="h-4 w-4 stroke-[3]" />
-        </motion.span>
-      </motion.button>
+  <motion.span
+    variants={{
+      rest: { x: 0 },
+      hover: { x: 4 },
+    }}
+    transition={{ type: "spring", stiffness: 400, damping: 20 }}
+    className="relative z-10 flex items-center justify-center"
+  >
+    <ChevronRight className="h-4 w-4 stroke-[3]" />
+  </motion.span>
+</motion.button>
 
       {/* Secondary Outline Button */}
       <motion.button

@@ -2,7 +2,7 @@ import React from "react";
 import contact_bg_img from "/Contact/contact_home_bg_image.png";
 import contact_bg2_img from "/Contact/contact_home_bg_icon.png";
 import ContactForm from "./ContactUsComponents/ContactForm";
-import ContactCards from "./ContactUsComponents/contactCards";
+import ContactCards from "./ContactUsComponents/ContactCards.jsx";
 import { motion } from "framer-motion";
 
 const ContactUs = () => {

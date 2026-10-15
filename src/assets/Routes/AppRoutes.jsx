@@ -4,7 +4,7 @@ import MainLayout from '../Layout/MainLayout';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import Industries from '../Pages/Industries';
-import Solutions from '../Pages/solutions';
+import Solutions from '../Pages/Solutions';
 import ContactUs from '../Pages/ContactUs';
 const AppRoutes = () => {
   return (

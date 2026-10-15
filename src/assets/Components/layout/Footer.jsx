@@ -141,7 +141,7 @@ const Footer = () => {
               </h4>
               <div className="mt-4 space-y-4 text-sm text-slate-400">
                 <a
-                  href="#"
+                  href="/contactus"
                   className="inline-block font-medium text-indigo-400 transition-colors hover:text-indigo-300 hover:underline"
                 >
                   Access Customer Center &rarr;

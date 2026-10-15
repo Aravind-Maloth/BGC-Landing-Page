@@ -121,7 +121,7 @@ const CardItem = ({ card, index, total, onActive }) => {
               {card.description}
             </p>
 
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               onClick={() => navigate("/contactus")}
@@ -129,7 +129,7 @@ const CardItem = ({ card, index, total, onActive }) => {
             >
               <span>View Details</span>
               <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           {/* Animated Image Side */}

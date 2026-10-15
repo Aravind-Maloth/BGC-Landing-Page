@@ -148,10 +148,10 @@ const Industries = () => {
                   {activeIndustry.description}
                 </p>
                 <div>
-                  <button className="inline-flex items-center gap-2 rounded-full bg-[#1D3D91] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#163075]" >
+                  {/* <button className="inline-flex items-center gap-2 rounded-full bg-[#1D3D91] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#163075]" >
                     Explore {activeIndustry.title}
                     <ArrowRight className="h-4 w-4" />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>

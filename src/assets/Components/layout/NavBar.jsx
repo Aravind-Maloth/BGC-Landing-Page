@@ -108,12 +108,15 @@ const NavBar = () => {
 
         {/* Desktop CTA Buttons */}
         <div className="hidden xl:flex justify-end items-center gap-3">
-        <SlidingButton 
-          variant="glass-yellow" 
-          onClick={() => navigate("/contactus")}
-        >
-          Contact Us
-        </SlidingButton>
+       <SlidingButton
+        variant="glass-yellow"
+        onClick={() => {
+          navigate("/contactus");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        Contact Us
+      </SlidingButton>
 
      <motion.button
       onClick={() => window.open("https://trueface.co.in/", "_blank")}

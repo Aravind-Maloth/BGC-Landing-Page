@@ -29,7 +29,7 @@ const BottomBanner = () => {
               top: "var(--y)",
               left: "var(--x)",
             }}
-          />
+          /> 
         </div>
 
         {/* Content */}
@@ -75,6 +75,10 @@ const BottomBanner = () => {
             hover: { color: "#fbbf24" },   // amber-400
           }}
           transition={{ duration: 0.2 }}
+           onClick={() => {
+          navigate("/contactus");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
         >
           Request a Demo
         </motion.span>

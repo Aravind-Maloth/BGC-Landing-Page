@@ -105,30 +105,30 @@ const HomeBanner = () => {
                 variants={itemVariants}
                 className="max-w-xl text-base text-[#D8E4FF] sm:text-lg md:text-xl"
               >
-                Verify identity, criminal records, employment, address, UAN and drug history in a single, orchestrated workflow.
+                Verify identity, criminal records, employment, address and UAN in a single, orchestrated workflow.
                 Built for high-volume hiring, fintech onboarding and mission-critical trust.
               </motion.p>
 
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
                 
                
-                    <SlidingButton 
+                    {/* <SlidingButton 
                             variant="glass-yellow" 
                             onClick={() => navigate("/contactus")}
                           >
                             Start a check now →
-                          </SlidingButton>
+                          </SlidingButton> */}
 
                 <span className="inline-flex items-center rounded-lg border border-[#4A66A8] bg-[#0F1E4D]/80 backdrop-blur-md px-4 py-3 text-sm">
                   🔒 Under 60s average check time
                 </span>
-                <span className="inline-flex items-center rounded-lg border border-[#4A66A8] bg-[#0F1E4D]/80 backdrop-blur-md px-4 py-3 text-sm">
+                {/* <span className="inline-flex items-center rounded-lg border border-[#4A66A8] bg-[#0F1E4D]/80 backdrop-blur-md px-4 py-3 text-sm">
                   🛡 SOC2-ready, GDPR aligned
-                </span>
+                </span> */}
               </motion.div>
 
               <motion.p variants={itemVariants} className="text-sm text-[#8AA4D3]">
-                ✅ Identity, drugs, criminal, address, employment, UAN
+                ✅ Identity, criminal, address, employment, UAN
               </motion.p>
             </motion.div>
 
